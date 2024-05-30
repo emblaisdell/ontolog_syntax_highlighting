@@ -12,7 +12,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ontolog",
-				"match": "\\b(rw|import|mod|enforce|to)\\b|~>"
+				"match": "\\b(rw|import|as|mod|enforce|to)\\b|~>"
 			}]
 		},
 		"strings": {
