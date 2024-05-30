@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ontolog",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#files"},
+		{"include": "#modules"},
+		{"include": "#variables"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ontolog",
+				"match": "\\b(rw|import|mod|enforce|to)\\b|~>"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.ontolog",
+			"begin": "\\!?\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ontolog",
+					"match": "\\\\."
+				}
+			]
+		},
+		"files": {
+			"name": "string.quoted.double.ontolog",
+			"begin": "(\\!|\\$)?<",
+			"end": ">",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ontolog",
+					"match": "\\\\."
+				}
+			]
+		},
+		"modules": {
+			"name": "meta.function-call.ontolog",
+			"match": "\\b((\\w+)\\.)?(\\w+)\\s*\\(",
+			"captures": {
+				"2": { "name": "entity.other.inherited-class.call.ontolog" },
+				"3": { "name": "entity.name.function.call.ontolog" }
+			}
+		},
+		"variables": {
+			"name": "variable.other.usage.ontolog",
+			"match": "(\\$\\w+)\\b"
+		}
+	},
+	"scopeName": "source.ontolog"
+}

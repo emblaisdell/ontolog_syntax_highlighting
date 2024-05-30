@@ -1,0 +1,25 @@
+{
+  "name": "ontolog",
+  "displayName": "Ontolog",
+  "description": "Syntax highlighting for Ontolog",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ontolog",
+      "aliases": ["Ontolog", "ontolog"],
+      "extensions": [".ont"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ontolog",
+      "scopeName": "source.ontolog",
+      "path": "./syntaxes/ontolog.tmLanguage.json"
+    }]
+  }
+}
