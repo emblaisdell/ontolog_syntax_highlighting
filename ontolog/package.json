@@ -21,5 +21,8 @@
       "scopeName": "source.ontolog",
       "path": "./syntaxes/ontolog.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "url": "https://github.com/emblaisdell/ontolog_syntax_highlighting"
   }
 }
