@@ -6,13 +6,15 @@
 		{"include": "#strings"},
 		{"include": "#files"},
 		{"include": "#modules"},
-		{"include": "#variables"}
+		{"include": "#variables"},
+		{"include": "#comments"},
+		{"include": "#numbers"}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ontolog",
-				"match": "\\b(rw|import|as|mod|enforce|to)\\b|~>"
+				"match": "\\b(rw|import|as|mod|enforce|base|run|print)\\b|~>"
 			}]
 		},
 		"strings": {
@@ -48,6 +50,23 @@
 		"variables": {
 			"name": "variable.other.usage.ontolog",
 			"match": "(\\$\\w+)\\b"
+		},
+		"comments": {
+			"patterns": [
+				{
+				"name": "comment.line.double-slash.ontolog",
+				"match": "//.*$"
+				},
+				{
+				"name": "comment.block.ontolog",
+				"begin": "/\\*",
+				"end": "\\*/"
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.ontolog",
+          	"match": "(\\b|\\!)\\d+\\b"
 		}
 	},
 	"scopeName": "source.ontolog"
